@@ -334,7 +334,7 @@ public class MovieDetailsResponse implements Serializable
     }
 
     public double getVoteAverage() {
-        return voteAverage;
+        return (voteAverage);
     }
 
     public void setVoteAverage(double voteAverage) {

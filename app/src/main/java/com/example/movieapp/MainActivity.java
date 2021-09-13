@@ -2,6 +2,7 @@ package com.example.movieapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     Intent intent = new Intent(MainActivity.this, MovieDetail.class);
                     intent.putExtra("movie_id", movieList.get(position).getId());
+
                     startActivity(intent);
                 }
             });
@@ -97,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
         View cardView;
         TextView name, rating;
         ImageView flag;
